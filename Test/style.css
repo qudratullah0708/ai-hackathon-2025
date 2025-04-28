@@ -1,0 +1,18 @@
+table th, td , tr{
+    border: 1px solid rebeccapurple;
+   border-collapse: collapse;
+    
+}
+
+body {
+    box-sizing:  border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.Table {
+    display: flex;
+    justify-content: center;
+    justify-items:  center;   
+}
+

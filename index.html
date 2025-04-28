@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>AI Response Stream:</h2>
+  <button onclick="startStream()">Start Streaming</button>
+  <div id="output" style="margin-top: 1em;"></div>
+
+  <script>
+    let eventSource;
+
+    function startStream() {
+      const output = document.getElementById("output");
+      output.innerHTML = ""; // Clear previous content
+      eventSource = new EventSource("/stream");
+
+      eventSource.onmessage = (event) => {
+        output.innerHTML += event.data + " ";
+      };
+
+      eventSource.onerror = (err) => {
+        console.error("SSE error:", err);
+        eventSource.close();
+      };
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+    "mcpServers" :
+    {
+    "Calculator": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--with",
+        "mcp[cli]",
+        "mcp",
+        "run",
+        "C:\\Users\\PMLS\\Desktop\\Python-Sdk\\main.py"
+      ]
+    }
+    }
+}
